@@ -9,3 +9,4 @@ mathematics
 pillow
 gevent
 gunicorn
+h5py
