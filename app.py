@@ -29,7 +29,7 @@ import base64
 #system level operations (like loading files)
 import sys 
 #for reading operating system data
-import os
+import os, glob
 
 from keras.applications.vgg16 import preprocess_input
 #tell our app where our saved model is
@@ -116,6 +116,10 @@ def predict():
     # else: 
     #     result = "This doesn't seem to be a dog --- Sorry!"
         
+        #eliminamos image
+        for fname in glob.glob('*.png'):
+            os.remove(fname) 
+
         return result
     
 
